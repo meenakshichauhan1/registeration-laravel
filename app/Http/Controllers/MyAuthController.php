@@ -19,7 +19,7 @@ class MyAuthController extends Controller
                 $request  ->validate([
                     'name' =>'required',
                     'email'=>'required|email|unique:my_auths',
-                    'password'=>'required|min:5|max:12',
+                    'password'=>'required|min:5|max:8',
                 ]);
                 $user=new MyAuth;
                 $user->name=$request->name;
